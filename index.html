@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jasmine de Leon | Electrical EIT, Transmission Lines</title>
+<meta name="description" content="Portfolio of Jasmine de Leon, Electrical Engineer-in-Training at BC Hydro with the Transmission Lines Engineering team.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&family=Baloo+2:wght@500;700;800&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=Big+Shoulders+Display:wght@600;800&family=Bricolage+Grotesque:wght@400;600;800&family=Chakra+Petch:wght@400;600;700&family=DM+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;500;700&family=Newsreader:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;800&family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<style>
+html{color-scheme:dark}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}
+/* Layout: one sticky concept switcher on top; each concept is a full single-look portfolio rendered into #stage. */
+:root{--bar:#15171c;--bar-fg:#f3f4f6;--bar-mut:#a3a9b4;--bar-line:#2c3039;--bar-acc:#ffd166;--bar-ink:#15171c;color-scheme:dark}
+html{scroll-behavior:smooth}
+body{background:var(--bar);color:var(--bar-fg);font-family:Manrope,system-ui,sans-serif}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bar);border-bottom:1px solid var(--bar-line);color:var(--bar-fg);font:500 13px/1 Manrope,system-ui,sans-serif}
+.bar .who{white-space:nowrap;color:var(--bar-mut)}
+.bar .who b{color:var(--bar-fg);font-weight:700}
+.bar button{font:inherit;cursor:pointer;color:var(--bar-mut);background:none;border:1px solid var(--bar-line);border-radius:999px;padding:7px 12px;white-space:nowrap;flex:none}
+.bar button:hover{color:var(--bar-fg);border-color:var(--bar-mut)}
+.bar button:focus-visible{outline:2px solid var(--bar-acc);outline-offset:2px}
+.bar .chip[aria-pressed="true"]{background:var(--bar-acc);border-color:var(--bar-acc);color:var(--bar-ink);font-weight:700}
+.chips{display:flex;gap:6px;overflow-x:auto;flex:1;min-width:0;scrollbar-width:none;padding-block:2px}
+.chips::-webkit-scrollbar{display:none}
+@media (max-width:640px){.bar .who{display:none}}
+#stage{overflow-x:clip}
+.dz{min-height:100vh;position:relative}
+.dz *,.dz *::before,.dz *::after{box-sizing:border-box}
+.dz h1,.dz h2,.dz h3,.dz p,.dz ul,.dz ol{margin:0}
+.dz ul,.dz ol{padding:0;list-style:none}
+.dz a{color:inherit}
+.dz button{font:inherit;cursor:pointer}
+.dz h1,.dz h2,.dz h3{text-wrap:balance}
+.dz .w{max-width:1080px;margin-inline:auto;padding-inline:20px}
+.dz [id^="s-"]{scroll-margin-top:70px}
+.dz .wd{display:inline-block;white-space:nowrap}
+.dz .ch{display:inline-block}
+.dz :focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*70ms)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.dz *,.dz *::before,.dz *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}}
+</style>
+<style id="dstyle"></style>
+
+</head>
+<body>
+<nav class="bar" aria-label="Portfolio concepts">
+  <span class="who"><b>Jasmine de Leon</b> · 3 concepts</span>
+  <button type="button" id="prev" aria-label="Previous concept">←</button>
+  <div class="chips" id="chips"></div>
+  <button type="button" id="next" aria-label="Next concept">→</button>
+</nav>
+<main id="stage"></main>
+
+<script>
+window.P={
+  name:'Jasmine de Leon',first:'Jasmine',last:'de Leon',
+  role:'Electrical EIT',spec:'Transmission Lines',loc:'Burnaby, British Columbia',
+  email:'rdeleon.jasmine@gmail.com',li:'https://www.linkedin.com/in/jasmine-rdeleon/',gh:'https://github.com/jasmine-deleon',
+  tag:'Electrical Engineer-in-Training at BC Hydro with the Transmission Lines Engineering team, with a mechatronics background in robotics, automation and electromechanical design.',
+  about:[
+    "I'm currently working as an Electrical EIT at BC Hydro with the Transmission Lines Engineering team, and rotating through different groups. I graduated from SFU with a Bachelor's in Mechatronic Systems Engineering, a combination of mechanical, electrical and systems engineering. During my studies I gained hands-on experience through co-ops and technical projects.",
+    "Outside of work you'll find me with Kobe, my English cream golden retriever, or gaming, building mechanical keyboards, planning the next trip (Japan, most of the time) and trying new places to eat."
+  ],
+  edu:[
+    {w:'Aug 2024',s:'Simon Fraser University',d:'BASc, Mechatronic Systems Engineering'},
+    {w:'Apr 2020',s:'Douglas College',d:'Engineering Foundations Certificate'}
+  ],
+  exp:[
+    {w:'Apr 2025 – Present',org:'BC Hydro · Permanent full-time',role:'Engineer-in-Training (EIT)',where:'Burnaby, BC',
+     pts:['Rotation: Transmission Lines Engineering.','Rotation: CIPD Capital Construction.','Rotation: Site C Project Engineering.']},
+    {w:'Jan 2023 – Aug 2023',org:'BC Hydro · Co-op',role:"Site C Clean Energy Project, Owner's Engineering Team",where:'Vancouver, BC',
+     pts:['Managed contractor submissions and coordinated engineer reviews for drawing approvals.',
+          'Verified engineering drawings in AutoCAD, Revit and Bluebeam, reducing design issues during construction.',
+          'Cross-referenced plans with the Navisworks dam model and ran on-site checks to minimise rework and delays.',
+          'Reviewed and verified inspection testing plans for proper execution and accurate data collection.']},
+    {w:'May 2021 – Dec 2021',org:'SFU Additive Manufacturing Laboratory · Co-op',role:'R&D Engineer',where:'Surrey, BC',
+     pts:['Programmed an ABB 6-axis robotic arm for 3D printing by translating 3-DoF slicer G-code into 6-DoF motion.',
+          'Integrated Marlin firmware and a Typhoon printhead with the arm, cutting setup time by 20%.',
+          'Evaluated reinforced composites able to withstand 100+ kg of stress for critical applications.',
+          'Developed bio-inspired gyroid structures that reduced material use by 10% and were adopted lab-wide.',
+          'Maintained the printers, managed inventory and documented findings in detailed reports.']},
+    {w:'Sep 2020 – Dec 2021',org:'Team Phantom · SFU Formula SAE Electric',role:'Frame & Aero Member',where:'Surrey, BC',
+     pts:['Conceptualized a car switch panel with 15 functions, enhancing user accessibility by 25% and meeting safety standards.',
+          'Designed an ergonomics test rig in SolidWorks to measure the driver and size the cockpit, to Formula SAE guidelines.']}
+  ],
+  award:'NSERC Undergraduate Student Research Award (USRA), Summer 2021',
+  proj:[
+    {t:'Cane-9 Navigational Robotic Companion',s:'Cane-9',role:'Team President & Project Manager',m:'Capstone project',
+     d:'A fully autonomous, affordable robotic guide dog for visually impaired people, designed to be stationed in public spaces. I led the mechanical design and calibrated LiDAR and 3D depth cameras with ROS SLAM for navigation and obstacle avoidance.',
+     tags:['ROS SLAM','LiDAR','3D depth cameras','AI object recognition','Audio & haptic feedback']},
+    {t:'EEG Headband & Sleeve for Post-Stroke Rehabilitation',s:'EEG Rehab',role:'Lead Researcher & Signal Processor',m:'MATLAB + EEGLAB',
+     d:'An at-home brain-monitoring headband paired with a neuromuscular stimulation sleeve, so stroke survivors can do arm rehabilitation without frequent physiotherapy visits. I researched recovery methods and cleaned and processed the EEG signals.',
+     tags:['Signal processing','MATLAB','EEGLAB','TMSEEG','SolidWorks']},
+    {t:'Automated Sorting & Inspection System',s:'Sorter',role:'LabVIEW Programmer & Quality Control',m:'97% accuracy',
+     d:'A small-scale automated sorting system built in LabVIEW that processes 100 items per hour at 97% accuracy. I calibrated the sensors and actuators and built a real-time monitoring GUI.',
+     tags:['LabVIEW','Sensors','Actuators','Quality control']},
+    {t:'Robotic Arm Simulation',s:'3-DoF Arm',role:'SolidWorks Designer & MATLAB Programmer',m:'95% accuracy',
+     d:'A 3-DoF serial manipulator that plays the first 10 moves of a chess game at 95% accuracy, programmed in MATLAB from trajectory, forward and inverse kinematics and workspace calculations.',
+     tags:['MATLAB','SolidWorks','Kinematics','Trajectory planning']},
+    {t:'SFU Team Phantom, Electric Formula Car',s:'Team Phantom',role:'Frame & Aero Member',m:'15-function panel',
+     d:'Designed a 15-function switch panel for driver access to car controls and an ergonomics test rig for sizing the cockpit, all in SolidWorks and to Formula SAE guidelines.',
+     tags:['SolidWorks','Formula SAE','Ergonomics']}
+  ],
+  stats:[
+    {n:97,u:'%',l:'sorting accuracy on the automated inspection system'},
+    {n:100,u:'/hr',l:'items processed by the sorter'},
+    {n:95,u:'%',l:'accuracy over 10 chess moves with a 3-DoF arm'},
+    {n:20,u:'%',l:'shorter setup time on the robotic 3D printer'}
+  ],
+  skills:{
+    Electrical:['Circuit Analysis & Design','Power Electronics','Control Systems','Signal Processing','Microcontrollers','Digital Logic','MEMS'],
+    Software:['Python','C++','MATLAB','Simulink','LabVIEW','ROS SLAM','SolidWorks','ANSYS','AutoCAD & Revit','LTspice & Multisim'],
+    Mechanical:['2D/3D CAD Design','Finite Element Analysis','3D Printing','CNC Machining & G-code','Machine Design','Stress/Strain Analysis','Material Science','Manufacturing Systems']
+  },
+  likes:[
+    {c:'KB',j:'犬',t:'Kobe',d:'My English cream golden retriever'},
+    {c:'GG',j:'遊',t:'Gaming',d:'How most evenings end'},
+    {c:'MK',j:'鍵',t:'Mechanical keyboards',d:'Building and tuning custom boards'},
+    {c:'JP',j:'日',t:'Japan',d:'The place I keep going back to'},
+    {c:'TR',j:'旅',t:'Travel',d:'Somewhere new whenever I can'},
+    {c:'FD',j:'食',t:'Food',d:'Always hunting for the next place to eat'},
+    {c:'AR',j:'絵',t:'Digital art',d:'Design and illustration on the side'}
+  ],
+  nav:[['About','about','自己紹介'],['Experience','exp','経歴'],['Projects','proj','作品'],['Skills','skills','技術'],['Off-hours','off','趣味'],['Contact','contact','連絡先']]
+};
+window.DESIGNS=[];
+window.U={
+  cl:[],reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,
+  clean(){this.cl.splice(0).forEach(f=>{try{f()}catch(e){}});this.snd.stop()},
+  /* Station melodies: public-domain songs that are used as real departure melodies, synthesised as a music-box bell. [midi, beats] */
+  snd:{ac:null,live:[],
+    list:[
+      {id:'sakura',title:'Sakura Sakura',jp:'さくらさくら',where:'Komagome Station, Yamanote Line',bpm:132,
+       n:[[69,1],[69,1],[71,2],[69,1],[69,1],[71,2],[69,1],[71,1],[72,1],[71,1],[69,1],[71,.5],[69,.5],[65,2],[64,1],[60,1],[64,1],[65,1],[64,1],[64,.5],[60,.5],[59,3]]},
+      {id:'kojo',title:'Kōjō no Tsuki',jp:'荒城の月',where:'Bungo-Taketa Station, Hōhi Main Line',bpm:104,
+       n:[[64,1],[64,1],[69,1],[71,1],[72,1],[71,1],[69,2],[65,1],[65,1],[64,1],[62,1],[64,4]]},
+      {id:'furusato',title:'Furusato',jp:'故郷',where:'Iiyama Station, Hokuriku Shinkansen',bpm:138,
+       n:[[65,1],[65,1],[65,1],[67,1.5],[69,.5],[67,1],[69,1],[69,1],[70,1],[72,3],[70,1],[72,1],[74,1],[69,1.5],[70,.5],[69,1],[67,1],[67,1],[64,1],[65,3]]},
+      {id:'door',title:'Door chime',jp:'ドアチャイム',where:'Train doors',bpm:150,n:[[76,1],[72,1.5],[76,1],[72,2]]}
+    ],
+    ctx(){if(!this.ac){const C=window.AudioContext||window.webkitAudioContext;if(!C)return null;this.ac=new C()}if(this.ac.state==='suspended')this.ac.resume();return this.ac},
+    stop(){this.live.splice(0).forEach(o=>{try{o.stop()}catch(e){}})},
+    play(id,vol){const m=this.list.find(x=>x.id===id),ac=this.ctx();if(!m||!ac)return 0;this.stop();vol=vol==null?.5:vol;
+      const b=60/m.bpm;let t=ac.currentTime+.05,tot=0;
+      m.n.forEach(k=>{const f=440*Math.pow(2,(k[0]-69)/12),d=k[1]*b;
+        [[1,'sine',.22,1.9],[2,'sine',.07,1.1],[4,'triangle',.025,.35]].forEach(p=>{const o=ac.createOscillator(),g=ac.createGain(),len=Math.max(.5,d*p[3]+.4);
+          o.type=p[1];o.frequency.value=f*p[0];g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(p[2]*vol+.0002,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+len);
+          o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+len+.05);this.live.push(o)});
+        t+=d;tot+=d});
+      return tot+1},
+    /* note onsets in seconds, for visualisers */
+    times(id){const m=this.list.find(x=>x.id===id);if(!m)return[];const b=60/m.bpm;let t=0;return m.n.map(k=>{const r={t:t,d:k[1]*b,midi:k[0]};t+=k[1]*b;return r})}
+  },
+  on(t,e,f,o){t.addEventListener(e,f,o);this.cl.push(()=>t.removeEventListener(e,f,o))},
+  later(ms,f){const id=setTimeout(f,ms);this.cl.push(()=>clearTimeout(id))},
+  every(ms,f){if(this.reduced)return;const id=setInterval(f,ms);this.cl.push(()=>clearInterval(id))},
+  raf(f){let id,go=true,t0=performance.now(),last=0;
+    const loop=n=>{if(!go)return;const t=(n-t0)/1000;f(t,Math.min(.05,t-last));last=t;id=requestAnimationFrame(loop)};
+    if(this.reduced){f(0,0)}else{id=requestAnimationFrame(loop)}
+    this.cl.push(()=>{go=false;cancelAnimationFrame(id)})},
+  fit(c){const s={ctx:c.getContext('2d'),w:0,h:0};
+    const r=()=>{const d=Math.min(window.devicePixelRatio||1,2),b=c.getBoundingClientRect();s.w=b.width;s.h=b.height;c.width=Math.max(1,b.width*d);c.height=Math.max(1,b.height*d);s.ctx.setTransform(d,0,0,d,0,0)};
+    r();this.on(window,'resize',r);return s},
+  split(t){let i=0;return t.split(' ').map(w=>'<span class="wd">'+[...w].map(c=>'<span class="ch" style="--i:'+(i++)+'">'+c+'</span>').join('')+'</span>').join(' ')},
+  count(el){const n=+el.dataset.n;if(this.reduced){el.textContent=n;return}const t0=performance.now();
+    const step=t=>{const p=Math.min(1,(t-t0)/1300),e=1-Math.pow(1-p,3);el.textContent=Math.round(n*e);if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)},
+  reveal(root,cb){const els=root.querySelectorAll('.rv,[data-n]');
+    if(!('IntersectionObserver' in window)){els.forEach(e=>{e.classList.add('in');if(e.dataset.n)e.textContent=e.dataset.n});return}
+    const io=new IntersectionObserver(en=>en.forEach(x=>{if(!x.isIntersecting)return;const e=x.target;io.unobserve(e);
+      if(e.dataset.n)this.count(e);if(e.classList.contains('rv')){e.classList.add('in');cb&&cb(e)}}),{threshold:.1});
+    els.forEach(e=>io.observe(e));this.cl.push(()=>io.disconnect())},
+  tilt(root,sel,deg){deg=deg||7;if(this.reduced)return;root.querySelectorAll(sel).forEach(el=>{
+    this.on(el,'pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      el.style.transition='transform .12s';el.style.transform='perspective(800px) rotateX('+(-y*deg)+'deg) rotateY('+(x*deg)+'deg)'});
+    this.on(el,'pointerleave',()=>{el.style.transition='transform .5s';el.style.transform=''})})},
+  type(el,words,sp){sp=sp||55;if(this.reduced){el.textContent=words[0];return}let w=0,i=0,dir=1,tm;
+    const tick=()=>{const s=words[w];i+=dir;el.textContent=s.slice(0,i);let d=sp;
+      if(i>=s.length){dir=-1;d=1500}else if(i<=0){dir=1;w=(w+1)%words.length;d=300}else if(dir<0){d=22}
+      tm=setTimeout(tick,d)};
+    tm=setTimeout(tick,400);this.cl.push(()=>clearTimeout(tm))},
+  flap(el,txt){txt=txt||el.dataset.t||el.textContent;if(this.reduced){el.textContent=txt;return}
+    const A='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';let n=0;clearInterval(el._f);
+    el._f=setInterval(()=>{n++;el.textContent=[...txt].map((c,i)=>i<n-4||c===' '?c:A[Math.random()*36|0]).join('');if(n>txt.length+4)clearInterval(el._f)},32);
+    this.cl.push(()=>clearInterval(el._f))},
+  scrollP(el){const r=el.getBoundingClientRect();return Math.max(0,Math.min(1,(innerHeight*.5-r.top)/Math.max(1,r.height)))},
+  sec(P,k){const li=a=>a.map(v=>'<li>'+v+'</li>').join('');
+    if(k==='about')return '<div class="cols"><div>'+P.about.map(p=>'<p>'+p+'</p>').join('')+'</div><ul class="edu">'+P.edu.map(e=>'<li><small>'+e.w+'</small><h3>'+e.s+'</h3>'+e.d+'</li>').join('')+'</ul></div>';
+    if(k==='exp')return '<div class="xp">'+P.exp.map(e=>'<article><small>'+e.w+' · '+e.where+'</small><h3>'+e.role+'</h3><p>'+e.org+'</p><ul>'+li(e.pts)+'</ul></article>').join('')+'</div><p class="aw">'+P.award+'</p>';
+    if(k==='proj')return '<div class="pg">'+P.proj.map(p=>'<article><small>'+p.role+' · '+p.m+'</small><h3>'+p.t+'</h3><p>'+p.d+'</p><ul class="tags">'+li(p.tags)+'</ul></article>').join('')+'</div>';
+    if(k==='skills')return '<div class="sk">'+Object.keys(P.skills).map(g=>'<div><h3>'+g+'</h3><ul class="tags">'+li(P.skills[g])+'</ul></div>').join('')+'</div>';
+    if(k==='off')return '<ul class="off">'+P.likes.map(l=>'<li><b>'+l.j+'</b><h3>'+l.t+'</h3><span>'+l.d+'</span></li>').join('')+'</ul>';
+    return '<p>Send a message and I\'ll get back to you.</p>'+this.ct(P)},
+  ct(P){return '<div class="ct"><code class="em">'+P.email+'</code><button type="button" class="cp" data-copy="'+P.email+'">Copy email</button><a class="li" href="'+P.li+'" target="_blank" rel="noopener">LinkedIn ↗</a><a class="li gh" href="'+P.gh+'" target="_blank" rel="noopener">GitHub ↗</a></div>'}
+};
+</script>
+<script src="d41.js"></script>
+<script>
+(function(){
+  const D=window.DESIGNS,stage=document.getElementById('stage'),chips=document.getElementById('chips'),style=document.getElementById('dstyle');
+  let cur=-1;
+  D.forEach((d,i)=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=(i+1)+' · '+d.name;b.title=d.note;b.onclick=()=>go(i);chips.appendChild(b)});
+  function go(i){
+    i=(i+D.length)%D.length;if(i===cur)return;cur=i;const d=D[i];U.clean();
+    style.textContent=d.css;document.body.style.background=d.bg;
+    stage.innerHTML='<div class="dz '+d.id+'">'+d.html(P,U)+'</div>';
+    window.scrollTo({top:0,behavior:'instant'});
+    const root=stage.firstChild;
+    root.querySelectorAll('[data-go]').forEach(el=>{
+      el.addEventListener('click',()=>{const t=root.querySelector('#s-'+el.dataset.go);if(t)t.scrollIntoView({behavior:U.reduced?'auto':'smooth',block:'start'})});
+      if(el.tagName!=='BUTTON'&&el.tagName!=='A')el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.dispatchEvent(new MouseEvent('click',{bubbles:true}))}})});
+    root.querySelectorAll('[data-copy]').forEach(el=>el.addEventListener('click',()=>{
+      const done=()=>{const o=el.textContent;el.textContent='Copied';setTimeout(()=>{el.textContent=o},1400)};
+      try{navigator.clipboard.writeText(el.dataset.copy).then(done,()=>{})}catch(e){}}));
+    try{d.mount&&d.mount(root,U,P)}catch(e){console.error(d.id,e)}
+    try{U.reveal(root,d.onReveal)}catch(e){root.querySelectorAll('.rv').forEach(x=>x.classList.add('in'))}
+    [...chips.children].forEach((c,k)=>{c.setAttribute('aria-pressed',k===i);if(k===i&&c.scrollIntoView)c.scrollIntoView({block:'nearest',inline:'center'})});
+    
+  }
+  document.getElementById('prev').onclick=()=>go(cur-1);
+  document.getElementById('next').onclick=()=>go(cur+1);
+  if(D.length<2)document.querySelector('.bar').hidden=true;
+  const h=(location.hash||'').slice(1),k=D.findIndex(d=>d.id===h);
+  go(k<0?0:k);
+})();
+</script>
+
+</body>
+</html>
